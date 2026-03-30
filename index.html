@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informasi resmi daftar ulang Penerimaan Mahasiswa Baru (PMB) Universitas Siliwangi — panduan dan portal daftar ulang per jalur seleksi.">
+  <title>PMB Universitas Siliwangi</title>
+
+  <!-- ========================= -->
+  <!--        FAVICON            -->
+  <!-- Ganti href dengan path    -->
+  <!-- favicon kampus Anda       -->
+  <!-- ========================= -->
+  <link rel="icon" href="https://unsil.ac.id/wp-content/uploads/2021/07/cropped-LOGO-UNSIL-150x150.png" type="image/x-icon">
+
+  <style>
+    /* ============================= */
+    /*  CSS VARIABLES / IDENTITAS    */
+    /*  Ubah warna di sini jika     */
+    /*  diperlukan                  */
+    /* ============================= */
+    :root {
+      --green-primary: #25784C;
+      --green-dark: #1C5C3A;
+      --green-light: #f0f8f3;
+      --green-lighter: #f7fbf9;
+      --yellow-accent: #FFF000;
+      --yellow-hover: #e6d800;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,.10);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: .2s ease;
+    }
+
+    /* ============================= */
+    /*        RESET & BASE          */
+    /* ============================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--gray-800);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ============================= */
+    /*        UTILITY                */
+    /* ============================= */
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); border: 0;
+    }
+
+    /* ============================= */
+    /*        HEADER / NAVBAR       */
+    /* ============================= */
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ============================= */
+    /*  LOGO — Ganti src pada tag   */
+    /*  <img> di HTML di bawah      */
+    /* ============================= */
+    .brand img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .brand span {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--green-primary);
+      letter-spacing: -.01em;
+    }
+
+    .header-link {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--green-primary);
+      padding: 6px 14px;
+      border: 1.5px solid var(--green-primary);
+      border-radius: 6px;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .header-link:hover,
+    .header-link:focus-visible {
+      background: var(--green-primary);
+      color: var(--white);
+    }
+
+    /* ============================= */
+    /*        HERO SECTION          */
+    /* ============================= */
+    .hero {
+      background: linear-gradient(170deg, var(--green-light) 0%, var(--white) 100%);
+      padding: 40px 0 36px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--green-primary);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    /* ============================= */
+    /*  SUBJUDUL — Ubah teks di     */
+    /*  HTML jika diperlukan        */
+    /* ============================= */
+    .hero p {
+      font-size: .95rem;
+      color: var(--gray-600);
+      max-width: 520px;
+      margin: 0 auto 22px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-primary);
+      color: var(--white);
+      font-size: .88rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ============================= */
+    /*     JALUR SELEKSI SECTION    */
+    /* ============================= */
+    .selection-paths {
+      padding: 44px 0 48px;
+      background: var(--gray-50);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: .88rem;
+      color: var(--gray-500);
+      margin-bottom: 32px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    /* ============================= */
+    /*   KARTU JALUR — Setiap kartu */
+    /*   berisi: nama, deskripsi,   */
+    /*   badge status, dan 3 link.  */
+    /*   Ubah di HTML sesuai data.  */
+    /* ============================= */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    /* ============================= */
+    /*  BADGE STATUS — Ubah class   */
+    /*  badge-open / badge-soon /   */
+    /*  badge-info di HTML untuk    */
+    /*  mengubah status tiap jalur  */
+    /* ============================= */
+    .badge {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      padding: 3px 10px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-open {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge-soon {
+      background: #fef9c3;
+      color: #854d0e;
+    }
+
+    .badge-closed {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .badge-info {
+      background: var(--gray-100);
+      color: var(--gray-600);
+    }
+
+    .card-desc {
+      font-size: .87rem;
+      color: var(--gray-600);
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ============================= */
+    /*  TOMBOL AKSI KARTU           */
+    /*  .action-outline  = sekunder */
+    /*  .action-fill     = primer   */
+    /*  Ganti href di HTML nanti    */
+    /* ============================= */
+    .action-outline {
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      border: 1.5px solid var(--gray-200);
+      color: var(--gray-700);
+      transition: border-color var(--transition), color var(--transition), background var(--transition);
+    }
+
+    .action-outline:hover,
+    .action-outline:focus-visible {
+      border-color: var(--green-primary);
+      color: var(--green-primary);
+      background: var(--green-light);
+    }
+
+    .action-fill {
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      background: var(--green-primary);
+      color: var(--white);
+      border: 1.5px solid var(--green-primary);
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .action-fill:hover,
+    .action-fill:focus-visible {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ============================= */
+    /*     INFORMASI TAMBAHAN       */
+    /* ============================= */
+    .info-section {
+      padding: 40px 0;
+    }
+
+    .info-box {
+      background: var(--green-light);
+      border-left: 4px solid var(--green-primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .info-box svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      color: var(--green-primary);
+      margin-top: 2px;
+    }
+
+    .info-box p {
+      font-size: .88rem;
+      color: var(--gray-700);
+      line-height: 1.65;
+    }
+
+    .info-box a {
+      color: var(--green-primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .info-box a:hover { text-decoration: none; }
+
+    /* ============================= */
+    /*        FOOTER / KONTAK       */
+    /* ============================= */
+    .site-footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding: 36px 0 28px;
+      text-align: center;
+    }
+
+    .footer-label {
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--gray-400);
+    }
+
+    /* ============================= */
+    /*  SOCIAL LINKS — Ganti href   */
+    /*  di HTML untuk setiap ikon   */
+    /* ============================= */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      color: var(--gray-400);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .social-link:hover,
+    .social-link:focus-visible {
+      background: var(--green-primary);
+      color: var(--white);
+    }
+
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-copy {
+      font-size: .75rem;
+      color: var(--gray-500);
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 20px;
+      margin-top: 4px;
+    }
+
+    /* ============================= */
+    /*      RESPONSIVE — TABLET+    */
+    /* ============================= */
+    @media (min-width: 640px) {
+      /* Default: 2 kolom (untuk 2 atau 4 kartu) */
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* 1 kartu: 1 kolom, dipusatkan */
+      .card-grid[data-count="1"] {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* 3 kartu: 3 kolom sejajar */
+      .card-grid[data-count="3"] {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 48px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .selection-paths {
+        padding: 52px 0 56px;
+      }
+    }
+
+    /* ============================= */
+    /*      FOCUS VISIBLE           */
+    /* ============================= */
+    :focus-visible {
+      outline: 2px solid var(--green-primary);
+      outline-offset: 2px;
+    }
+
+    /* skip to content */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--green-primary);
+      color: var(--white);
+      padding: 8px 16px;
+      z-index: 200;
+      font-size: .85rem;
+      font-weight: 600;
+      border-radius: 0 0 8px 0;
+    }
+    .skip-link:focus {
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Skip to main content (aksesibilitas) -->
+<a href="#main" class="skip-link">Langsung ke konten utama</a>
+
+<!-- ====================================== -->
+<!--              HEADER / NAVBAR           -->
+<!-- ====================================== -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="#" class="brand" aria-label="PMB Universitas Siliwangi — Beranda">
+      <!-- ================================ -->
+      <!-- LOGO: Ganti src dengan URL logo  -->
+      <!-- Universitas Siliwangi Anda       -->
+      <!-- ================================ -->
+      <img src="https://unsil.ac.id/wp-content/uploads/2021/07/cropped-LOGO-UNSIL-150x150.png" alt="Logo Universitas Siliwangi" width="36" height="36">
+      <span>PMB UNSIL</span>
+    </a>
+    <a href="#jalur-seleksi" class="header-link">Daftar Ulang</a>
+  </div>
+</header>
+
+<!-- ====================================== -->
+<!--             HERO SECTION               -->
+<!-- ====================================== -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <!-- ================================ -->
+    <!-- JUDUL UTAMA — Ubah teks di sini -->
+    <!-- ================================ -->
+    <h1 id="hero-heading">Penerimaan Mahasiswa Baru<br>Universitas Siliwangi</h1>
+
+    <!-- ================================ -->
+    <!-- SUBJUDUL — Ubah teks di sini    -->
+    <!-- ================================ -->
+    <p>Informasi resmi daftar ulang calon mahasiswa baru per jalur seleksi. Pastikan Anda menyelesaikan proses daftar ulang sesuai jadwal yang ditetapkan.</p>
+
+    <a href="#jalur-seleksi" class="btn-primary">
+      Lihat Info Daftar Ulang
+      <!-- arrow-down icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ====================================== -->
+<!--         MAIN CONTENT                   -->
+<!-- ====================================== -->
+<main id="main">
+
+  <!-- ==================================== -->
+  <!--       SECTION JALUR SELEKSI          -->
+  <!-- ==================================== -->
+  <section id="jalur-seleksi" class="selection-paths" aria-labelledby="paths-heading">
+    <div class="container">
+      <h2 id="paths-heading" class="section-title">Daftar Ulang per Jalur Seleksi</h2>
+      <p class="section-subtitle">Pilih jalur seleksi Anda untuk melihat informasi dan portal daftar ulang.</p>
+
+      <!-- Kartu di-render otomatis oleh JavaScript dari data di bawah -->
+      <div class="card-grid" id="card-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==================================== -->
+  <!--     SECTION INFORMASI TAMBAHAN       -->
+  <!-- ==================================== -->
+  <section class="info-section" aria-label="Informasi tambahan">
+    <div class="container">
+      <div class="info-box">
+        <!-- info icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/></svg>
+        <!-- ================================ -->
+        <!-- CATATAN INFORMASI — Ubah teks   -->
+        <!-- dan link di sini jika perlu     -->
+        <!-- ================================ -->
+        <p>Seluruh informasi dan panduan resmi daftar ulang PMB Universitas Siliwangi dapat diakses melalui <a href="https://unsil.ac.id" target="_blank" rel="noopener">website resmi UNSIL</a> serta kanal media sosial yang tercantum di bawah. Pastikan Anda menyelesaikan proses daftar ulang sebelum batas waktu yang ditentukan.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================================== -->
+<!--              FOOTER                    -->
+<!-- ====================================== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p class="footer-label">Ikuti kanal resmi untuk pembaruan informasi PMB</p>
+
+    <nav class="social-links" aria-label="Media sosial resmi">
+      <!-- ================================ -->
+      <!-- FACEBOOK — Ganti # dengan URL   -->
+      <!-- ================================ -->
+      <a href="https://www.facebook.com/humasunsil/?locale=id_ID" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z"/></svg>
+      </a>
+
+      <!-- ================================ -->
+      <!-- INSTAGRAM — Ganti # dengan URL  -->
+      <!-- ================================ -->
+      <a href="https://www.instagram.com/humas_unsil/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.523.99 4.088 4.088 0 0 1 .99 1.524c.163.46.35 1.26.403 2.43.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 0 1-.99 1.523 4.088 4.088 0 0 1-1.524.99c-.46.163-1.26.35-2.43.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 0 1-1.523-.99 4.088 4.088 0 0 1-.99-1.524c-.163-.46-.35-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 0 1 .99-1.523A4.088 4.088 0 0 1 5.15 2.206c.46-.163 1.26-.35 2.43-.403C8.845 2.175 9.225 2.163 12 2.163Zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.131 4.902.333 4.14.63a6.21 6.21 0 0 0-2.244 1.46A6.21 6.21 0 0 0 .436 4.336C.139 5.098-.063 5.97.005 7.249.014 8.53 0 8.938 0 12.197s.014 3.668.072 4.948c.059 1.278.261 2.15.558 2.913a6.21 6.21 0 0 0 1.46 2.244 6.21 6.21 0 0 0 2.245 1.46c.762.297 1.635.499 2.913.558C8.53 23.986 8.938 24 12 24s3.47-.014 4.75-.072c1.278-.059 2.15-.261 2.913-.558a6.21 6.21 0 0 0 2.244-1.46 6.21 6.21 0 0 0 1.46-2.244c.297-.762.499-1.635.558-2.913.058-1.28.072-1.688.072-4.948s-.014-3.668-.072-4.948c-.059-1.278-.261-2.15-.558-2.913a6.21 6.21 0 0 0-1.46-2.244A6.21 6.21 0 0 0 19.663.436C18.901.139 18.028-.063 16.75.005 15.47.014 15.062 0 12 0ZM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+      </a>
+
+      <!-- ================================ -->
+      <!-- EMAIL — Ganti alamat email jika  -->
+      <!-- diperlukan                       -->
+      <!-- ================================ -->
+      <a href="mailto:info@unsil.ac.id" class="social-link" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+      </a>
+    </nav>
+
+    <p class="footer-copy">&copy; 2026 Universitas Siliwangi &middot; Penerimaan Mahasiswa Baru</p>
+  </div>
+</footer>
+
+<!-- ====================================== -->
+<!--   DATA JALUR SELEKSI (file terpisah)   -->
+<!--   Edit data.js untuk mengatur kartu    -->
+<!-- ====================================== -->
+<script src="data.js"></script>
+
+<!-- ====================================== -->
+<!--   JAVASCRIPT RINGAN                    -->
+<!-- ====================================== -->
+<script>
+  /* ================================================= */
+  /*  RENDER KARTU — Tidak perlu diubah                */
+  /*  Data dibaca dari data.js (variabel jalurSeleksi) */
+  /* ================================================= */
+  (function() {
+    var badgeMap = {
+      "Dibuka":        "badge-open",
+      "Segera Dibuka": "badge-soon",
+      "Ditutup":       "badge-closed",
+      "Informasi":     "badge-info"
+    };
+
+    var grid = document.getElementById("card-grid");
+    if (!grid || typeof jalurSeleksi === "undefined") return;
+
+    var html = "";
+    for (var i = 0; i < jalurSeleksi.length; i++) {
+      var j = jalurSeleksi[i];
+      var badgeClass = badgeMap[j.status] || "badge-info";
+
+      html +=
+        '<article class="card">' +
+          '<div class="card-header">' +
+            '<h3 class="card-title">' + j.nama + '</h3>' +
+            '<span class="badge ' + badgeClass + '">' + j.status + '</span>' +
+          '</div>' +
+          '<p class="card-desc">' + j.deskripsi + '</p>' +
+          '<div class="card-actions">' +
+            '<a href="' + j.informasi + '" class="action-outline">Informasi</a>' +
+            (j.status === "Dibuka" ? '<a href="' + j.daftar + '" class="action-fill">Daftar Ulang</a>' : '') +
+          '</div>' +
+        '</article>';
+    }
+
+    grid.innerHTML = html;
+    grid.dataset.count = jalurSeleksi.length;
+  })();
+
+  /* ================================================= */
+  /*  SMOOTH SCROLL                                    */
+  /* ================================================= */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
